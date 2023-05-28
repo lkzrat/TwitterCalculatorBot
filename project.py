@@ -27,7 +27,7 @@ def main():
     print('\n\033[1;31mOffline\033[m')  # Terminal
 
 
-def online(checks):
+def online(checks: int) -> None:
     """
     loop structure to check mentions and reply them
     :param checks: number of mentions checks. A LOT OF CHECKS FREEZES THE FUNCTION.
@@ -67,7 +67,7 @@ def online(checks):
         sleep(5)
 
 
-def connect():
+def connect() -> tweepy.Client:
     """
     creates and returns a tweepy.Client() object with the keys from the keys dict object
     """
@@ -80,7 +80,7 @@ def connect():
     return client
 
 
-def user_id(client):
+def user_id(client: tweepy.Client) -> int:
     """
     gets a twitter account id
     :param client: the tweepy.Client() object
@@ -90,7 +90,7 @@ def user_id(client):
         return int(id.group(1))
 
 
-def tweet_id(tweet):
+def tweet_id(tweet: tweepy.Tweet) -> int:
     """
     gets a tweet id
     :param tweet: a tweet object
@@ -100,7 +100,7 @@ def tweet_id(tweet):
         return int(id.group(1))
 
 
-def tweet(client, string):
+def tweet(client: tweepy.Client, string: str) -> tweepy.Tweet:
     """
     tweet a text
     :param client: the tweepy.Client() object that will tweet
@@ -113,7 +113,7 @@ def tweet(client, string):
         raise Exception('\033[1;91m[Something went wrong with the tweet :(]\033[m')
 
 
-def del_tweet(client, id):
+def del_tweet(client: tweepy.Client, id: int) -> tweepy.Tweet:
     """
     deletes a tweet
     :param client: the tweepy.Client() object that will have a tweet deleted
@@ -126,7 +126,7 @@ def del_tweet(client, id):
         raise Exception('\033[1;91m[Something went wrong with the tweet deletion :(]\033[m')
 
 
-def reply(client, string, id):
+def reply(client: tweepy.Client, string: str, id: int) -> tweepy.Tweet:
     """
     reply some tweet
     :param client: the tweepy.Client() object that will reply
@@ -140,7 +140,7 @@ def reply(client, string, id):
         raise Exception('\033[1;91m[Something went wrong with the reply:(]\033[m')
 
 
-def search(q):
+def search(q: str) -> list[dict]:
     """
     search a maximum amount of 10 tweets using a string query
     :param q: string query
@@ -158,7 +158,7 @@ def search(q):
         return None
 
 
-def calculate(string):
+def calculate(string: str) -> float:
     """
     returns the answer to a math problem in a tweet's string
     :param string: string with math operations
