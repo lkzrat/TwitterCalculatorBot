@@ -3,7 +3,7 @@ import csv
 
 class Mycsv:
     @classmethod
-    def write(cls, text, file):
+    def write(cls, text: str, file: str) -> None:
         """
         writes a string per row
         :param text: string
@@ -13,7 +13,7 @@ class Mycsv:
             writer.writerow([text])
 
     @classmethod
-    def read(cls, file):
+    def read(cls, file: str) -> list[str]:
         """
         reads the csv file
         :return: list object [row1, row2, row3, ...]
