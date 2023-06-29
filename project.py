@@ -7,11 +7,11 @@ from mycsv import Mycsv
 
 # Twitter account keys
 keys = {
-    'bt': 'AAAAAAAAAAAAAAAAAAAAACpTgwEAAAAA3zWPK57M%2Bxcz1kxAzxWSbu1GGpY%3DnsoSrk8etDb8udFQipKvi1okoAqXHebRO06C4ctW43Rufyptbp',
-    'ck': 'dCKKAsDw1KOWG6KajS92oPa6m',
-    'cs': 'z7n07OGupHTf19BW1n6V1NZbTo8DjhwH5WQVKmNoHPbqKu25Wf',
-    'at': '1567583209273040896-9XgTXfERKH9yXBI4mZXLX5Yv6GzQMU',
-    'ats': 'XzruPITZRwhQLHR0gEdHw7CiRXS1tHTPqOBcWpf21MBmP'
+    'bt': '',
+    'ck': '',
+    'cs': '',
+    'at': '',
+    'ats': ''
 }
 
 
